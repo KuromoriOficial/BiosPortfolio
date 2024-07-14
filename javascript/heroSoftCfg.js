@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     focusableElements[currentFocusIndex].classList.add('focused');
 
     const desktopContainer = document.querySelector('.tableCfg tbody');
-    const itemsPerColumn = 12; // Número de elementos por columna
+    const itemsPerColumn = 12; // Número de elementos por coluna
 
     function createElements(container, data) {
         let rowIndex = 0;
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function openModal(item) {
         if (item.type === 'html' && item.path && isWebLink(item.path)) {
-            // Si el tipo de archivo es HTML, y tiene un enlace web en el path, abrir en una nueva pestaña
+            // Se o tipo de arquivo for HTML e você tiver um link da Web no caminho, abra em uma nova guia
             window.open(item.path, '_blank');
             return;
         }
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const modalBody = modal.querySelector(".modal-bodyCarpet");
 
         modalTitle.textContent = item.name;
-        modalBody.innerHTML = ''; // Limpiar contenido anterior
+        modalBody.innerHTML = ''; // limpar conteudo anterior
 
         const image = document.createElement('img');
         image.src = item.path;
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function isWebLink(path) {
-        // Función para verificar si una cadena es un enlace web
+        // função de verificação
         const regex = /^(http|https):\/\/[^ "]+$/;
         return regex.test(path);
     }
@@ -226,10 +226,10 @@ document.addEventListener('DOMContentLoaded', () => {
         isDragging = false;
     });
 
-    // Establecer el ancho y la altura máximos
+
     var minWidth = '750px';
     var minHeight = '375px';
-    // Aplicar estilos de ancho y altura máximos
+
     modalTitleBarTXT.style.minWidth = minWidth;
     modalTitleBarTXT.style.minWidth = minHeight;
     modalContentTXT.style.minWidth = minWidth;
@@ -246,7 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
         var dropdownMenu = document.querySelector('.dropdown-menu');
         var hsMenuButton = document.querySelector('.hsMenu');
 
-        // Si el clic no fue en el menú ni en el botón, cierra el menú
+
         if (!dropdownMenu.contains(event.target) && !hsMenuButton.contains(event.target)) {
             dropdownMenu.classList.remove('show');
         }

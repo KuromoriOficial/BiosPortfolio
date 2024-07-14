@@ -13,7 +13,7 @@ const DISKS = [
     "ExcelStor Technology J880 PF20A21B",
     "ExcelStor Technology J9250S GM20A52A",
     "WDC WD3200AAJS-00RYA0 12.01B",
-    "ST9500325AS 0002SDM1",
+    "ST9500325AS 0002SDM1 (PICHAU)",
     "MAXTOR 6Y060M0 SN0874",
     "WDC WD800JB-00FMA0"
 ];
@@ -83,7 +83,7 @@ class AwardBoot extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: "open" });
-        // Agregar el evento para escuchar la tecla F2
+        // Evento de tecla F2
         document.addEventListener("keydown", (event) => {
             if (event.key === "F2") {
                 this.enterDOSConsole();
@@ -215,13 +215,13 @@ class AwardBoot extends HTMLElement {
         <div class="brand-text">
         <img class="ribbon" src="./img/award-logo.png" alt="Award Logo">
             <p>
-            CSLUDUENA PORTFOLIO BIOS v4.50G, An Energy Star Ally<br>
-                Copyright (C) <1986-2024>, HeroSoft, Inc.
+            ToShiroSoft PORTFOLIO BIOS v4.50G, An Energy Star Ally<br>
+                Copyright (C) <1986-2024>, ToShiroSoft, Inc.
             </p>
         </div>
-            <p>CSLUDUENA ACPI BIOS Revision 1.0A</p>
+            <p>ToShiroSoft ACPI BIOS Revision 1.0A</p>
             <p>
-                Intel(R) Pentium(R) PRO-MMX CPU at 133Mhz<br>
+                Intel(R) i3-4330(R) PRO-MMX CPU at 3.50 GHz<br>
                 Memory Test:  <span class="memory">${2 ** 16}</span>
             </p>
         `, 2000);
@@ -347,7 +347,7 @@ class AwardBoot extends HTMLElement {
             <div class="header">
             </div>
             <p class="pnp-stage off">
-            Portfolio BIOS HeroSoft Extension v1.0A<br>
+            Portfolio BIOS ToShiroSoft Extension v1.1A<br>
             Initialize Sistem. Loading Personal Information Data...
             </p>
             <div class="hdd">
@@ -359,7 +359,7 @@ class AwardBoot extends HTMLElement {
             <p class="line event"></p>
             <p class="line last style=margin-top: 50%">
                 ${date()}
-                <span>Copyright (C) 1986-2024 HeroSoft, Inc.</span>
+                <span>Copyright (C) 1986-2024 ToShiroSoft, Inc.</span>
             </p>
             <img class="epa" src="./img/epa.png" alt="Energy EPA">
         </div>
@@ -388,7 +388,7 @@ class AwardBoot extends HTMLElement {
             $('#terminal').terminal(function (command) {
                 // Aquí irá la lógica para procesar los comandos ingresados por el usuario
             }, {
-                greetings: 'HeroSoft(R) CsLuduena Portfolio\n(C)Copyright HeroSoft Corp 1986-2024\n',
+                greetings: 'ToShiro. inc(R) ToS.Portifolio\n(C)Copyright ToShiro Corp 1986-2024\n',
                 prompt: 'C:\\>'
             });
         });

@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 consoleContent.innerHTML += 
                 `   [cls]         Clears the console screen\n`;
                 consoleContent.innerHTML += 
-                `   [start.exe]   Run HeroSoft Operative System\n`;
+                `   [start.exe]   Run ToShiroSoft Operative System\n`;
                 break;
             case "cls":
                 consoleContent.innerHTML = "";

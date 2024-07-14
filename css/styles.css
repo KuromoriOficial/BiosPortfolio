@@ -532,12 +532,17 @@ html {
 }
 
 .mainTitleDos span.green {
-  color: #00ff00;
+  color: #ff9b44;
   /* Rojo */
 }
 
 .mainTitleDos span.red {
   color: #ff0000;
+  /* Rojo */
+}
+
+.mainTitleDos span.blue {
+  color: #002aff;
   /* Rojo */
 }
 
