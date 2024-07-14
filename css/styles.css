@@ -1,0 +1,992 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+#bodyIndex {
+  background: #000;
+  font-family: "dosFont";
+  font-size: 19px;
+  color: #888;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0;
+  transform: scale(0.6) translateY(-25%);
+}
+
+#styleBody {
+  background: #000;
+  font-family: "dosFont";
+  font-size: 19px;
+  color: #888;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0;
+  transform: scale(0.6) translateY(-25%);
+}
+
+.last {
+  position: absolute;
+  bottom: 12%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.BackColorSO {
+  background-color: rgb(20, 48, 52);
+}
+
+body {
+  scrollbar-color: #F3544D #ee8984;
+}
+
+.navBarMenu {
+  background-color: #5154E6;
+  display: flex;
+  justify-content: space-between;
+  border: 3px solid black;
+  border-width: 3px 0 0;
+  font-family: "dosFont";
+}
+
+.hsMenu {
+  background-color: yellowgreen;
+  border: 2px solid black;
+  font-family: "dosFont";
+  font-size: 37px;
+  margin-top: 6px;
+  margin-bottom: 7px;
+  padding-left: 5px;
+  padding-bottom: 0px;
+  padding-top: 3px;
+  margin-left: 5px;
+}
+
+.hsMenu {
+  position: relative;
+}
+
+.hsMenu > hr {
+  position: absolute;
+  bottom: 3px;
+  left: 4.7px;
+  width: 19%;
+  border: 0;
+  height: 5px;
+  background-color: black;
+  /* margin: 0px; */
+  /* padding: 0; */
+}
+
+.dflex {
+  display: flex;
+}
+
+.hrCfgS,
+.hrCfgV,
+.hrCfgE {
+  position: relative;
+}
+
+.hrCfgS > hr {
+  position: relative;
+  bottom: 5.6px;
+  left: 6.5px;
+  width: 14%;
+  border: 0;
+  height: 3px;
+  background-color: #000000;
+  /* margin: 0px; */
+  /* padding: 0; */
+}
+
+.hrCfgV > hr {
+  position: relative;
+  bottom: 6px;
+  left: -0.3px;
+  width: 20.8%;
+  border: 0;
+  height: 3px;
+  background-color: #000000;
+  /* margin: 0px; */
+  /* padding: 0; */
+}
+
+.hrCfgE > hr {
+  position: absolute;
+  bottom: 3px;
+  left: -0.3px;
+  width: 13.8%;
+  border: 0;
+  height: 3px;
+  background-color: black;
+  /* margin: 0px; */
+  /* padding: 0; */
+}
+
+.heroSoftTitle {
+  font-family: "dosFont";
+  display: flex;
+  font-size: 25px;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+.menuSection1 {
+  margin-left: 7px;
+}
+
+.menuSection4 {
+  margin-left: 7px;
+  margin-right: 1%;
+}
+
+.menuSection5 {
+  margin-right: 1%;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.cfgTxt {
+  font-family: "dosFont";
+  font-size: 30px;
+}
+
+.navBarUnity {
+  background-color: rgb(0, 0, 0);
+  border: 3px solid black;
+  color: white;
+  border-width: 3px 0 2px;
+  font-family: "dosFont";
+  /* height: 29px; */
+  padding-top: 3px;
+  text-align: center;
+  padding-bottom: 0px;
+}
+
+.cfgSubTxt {
+  font-family: "dosFont";
+  font-size: 30px;
+  /* padding-top: 12px; */
+}
+
+.optionsSystem:hover:not(.focused),
+.optionsSystem:focus:not(.focused),
+.optionsSystem:focus-visible {
+  background-color: black;
+  /* Cambio de color de fondo en hover y foco */
+  color: white;
+  /* Cambio de color de texto en hover y foco */
+}
+
+.optionsSystem.focused {
+  background-color: rgb(0, 0, 0);
+  /* Fondo blanco cuando el elemento tiene foco */
+  color: rgb(255, 255, 255);
+  /* Texto negro cuando el elemento tiene foco */
+}
+
+/* Desactivar el cursor parpadeante en los elementos hsMenu, menuSection1, menuSection2, menuSection3 y grid-item */
+.hsMenu,
+.menuSection1,
+.menuSection2,
+.menuSection3,
+.optionsSystem {
+  caret-color: transparent;
+  /* Hacer transparente el cursor parpadeante */
+}
+
+/* Establecer el tamaño de la tabla al 100% del ancho y alto del main */
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  /* 100% del viewport height */
+}
+
+.draggable {
+  position: absolute;
+  z-index: 1000; /* Asegúrate de que la carpeta se muestre encima de otras */
+  cursor: move;
+}
+
+.tableCfg {
+  background-color: white;
+  width: 100%;
+  height: 80vh;
+  border: 21px outset #6276a5;
+  border-collapse: collapse;
+}
+
+.optionsSystem {
+  background-color: white;
+  text-align: left;
+  /* padding: 1px; */
+  padding-left: 15px;
+  padding-right: 15px;
+  font-family: "dosFont";
+  font-size: 40px;
+}
+
+.modal-titleTXT, .modal-titleCarpet {
+  white-space: nowrap;
+}
+
+.optionsSystem {
+  display: flex;
+  margin-right: 0px;
+  align-items: center;
+}
+
+td {
+  padding-left: 10px;
+  /* Espacio interno a la izquierda */
+  padding-right: 10px;
+  /* Espacio interno a la derecha */
+}
+
+tr {
+  width: -moz-max-content;
+  /* width: max-content; */
+  /* height: 1.657em; */
+  min-height: 66px;
+  min-width: 466px;
+}
+
+tbody {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  /* grid-auto-rows: minmax(auto, auto); */
+  gap: 0;
+}
+
+tr:nth-child(1) td:nth-child(n+1):nth-child(-n+12) {
+  grid-column: span 12;
+  /* Ocupa las 12 columnas en la primera fila */
+}
+
+tr:nth-child(2) td:nth-child(n+13):nth-child(-n+24) {
+  grid-column: span 12;
+  /* Ocupa las 12 columnas en la segunda fila */
+}
+
+.navBarSecondary {
+  background-color: #F3FC4D;
+  border: 3px solid black;
+  border-width: 3px 0 0;
+  font-family: "dosFont";
+  height: 33px;
+  display: flex;
+  align-content: flex-start;
+}
+
+.menuSectionWithSubMenu:hover {
+  background-color: #5154E6;
+}
+
+.subMenu {
+  position: absolute;
+  background-color: #F3FC4D;
+  color: black;
+  width: 202px;
+  height: 148px;
+  font-size: 30px;
+  margin-left: -10px;
+  display: none;
+  /* padding: 0px; */
+  box-sizing: border-box;
+  /* margin-bottom: 4px; */
+}
+
+.num1Smenu {
+  margin-left: 14px;
+}
+
+.num2Smenu {
+  margin-left: 7px;
+}
+
+.num3Smenu {
+  margin-left: 7px;
+}
+
+.subMenuContent:hover {
+  background-color: #5154E6;
+}
+
+.menuSectionWithSubMenu:hover .subMenu {
+  display: block;
+}
+
+.paddingRL5px {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.paddingRL4px {
+  padding-left: 0px;
+  padding-right: 10px;
+}
+
+.paddingRL3px {
+  padding-left: 10px;
+  padding-right: 5px;
+}
+
+.modal {
+  display: none;
+  /* Ocultar la ventana modal por defecto */
+  position: fixed;
+  /* Mantenerla en su lugar */
+  z-index: 1;
+  /* Situarla por encima de todo lo demás en la página */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Ancho completo */
+  height: 100%;
+  /* Altura completa */
+  overflow: auto;
+  /* Habilitar el desplazamiento si es necesario */
+  background-color: rgb(0, 0, 0);
+  /* Color de fondo negro con opacidad */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* También se agrega opacidad (black = 0) */
+}
+
+/* Contenido de la ventana modal */
+.modalCarpet {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 0;
+  border: 2px solid #888;
+  width: 500px;
+  height: 400px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.modal-title-bar {
+  background-color: #0000AA;
+  color: #FFFFFF;
+  padding-bottom: 40px;
+  font-size: 20px;
+}
+
+.modal-title {
+  font-family: dosFont;
+  position: absolute;
+  left: 50%;
+  margin-top: 7px;
+  font-size: 30px;
+  transform: translateX(-50%);
+}
+
+.close,
+.closeCarpet {
+  float: right;
+  font-size: 29px;
+  font-weight: bold;
+  margin-right: 1px;
+  margin-top: -6px;
+}
+
+.close:hover,
+.close:focus {
+  color: #FF0000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.closeCarpet:hover,
+.closeCarpet:hover {
+  color: #FF0000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+/* CSS */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 88%;
+  display: none;
+  position: absolute;
+  width: 138px;
+  background-color: #F3FC4D;
+  border: 2px solid #000000;
+  z-index: 1;
+  list-style-type: none;
+  padding: 0;
+  margin-left: 5.4px;
+  font-size: 25px;
+}
+
+.dropdown-menu {
+  display: none;
+  /* resto del código CSS */
+  transition: all 0.3s ease; /* esto hace que el menú se abra y cierre suavemente */
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.blocked {
+  pointer-events: none; /* esto hace que el elemento no sea "clickeable" */
+  color: #999999; /* esto cambia el color del texto a gris claro, puedes ajustarlo a lo que prefieras */
+}
+
+.blocked:hover {
+  background-color: transparent; /* esto evita que el fondo cambie de color al pasar el mouse sobre el elemento */
+}
+
+.listStyle:hover {
+  background-color: #5154E6;
+}
+
+.blocked hr {
+  border: none;
+  border-top: 2px solid #000000; /* esto crea una línea horizontal */
+  width: 100%; /* esto hace que la línea ocupe todo el ancho del elemento */
+}
+
+#consoleBody {
+  background: #000;
+  font-family: "dosFont";
+  color: #888;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.titleArea {
+  margin-top: 20px;
+  margin-left: 20px;
+  color: #aaa;
+  position: relative;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.consoleAll {
+  margin-top: 3%;
+  margin-left: 2%;
+}
+
+#consoleBody {
+  background: #000;
+  font-family: "dosFont";
+  color: #b5b5b5;
+  font-size: 22px;
+  /* margin-top: 0%; */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.titleArea {
+  margin-top: 20px;
+  margin-left: 60px;
+  color: #aaa;
+}
+
+.mainTitleDos {
+  font-size: 29px;
+  margin-top: 15px;
+  margin-left: 3%;
+}
+
+.mainTitleDos span.green {
+  color: #00ff00;
+  /* Rojo */
+}
+
+.mainTitleDos span.red {
+  color: #ff0000;
+  /* Rojo */
+}
+
+.mainSubTitleDos {
+  font-size: 29px;
+  margin-top: 10px;
+  margin-bottom: 2%;
+  margin-left: 2%;
+}
+
+#consoleArea {
+  position: relative;
+  flex: 1;
+  /* overflow-y: auto; */
+  padding: 10px;
+}
+
+#consoleContent {
+  white-space: pre;
+  margin-left: 0px;
+  margin-bottom: 5px;
+  /* Ajuste del margen inferior */
+  line-height: 32px;
+}
+
+#inputPrefix {
+  position: absolute;
+  left: 10px;
+  color: #b5b5b5;
+  font-size: 22px;
+  line-height: 26px;
+  /* Alinear con el texto del textarea */
+  margin-top: -2px;
+  /* Ajuste del margen superior */
+  margin-bottom: 5px;
+  /* Ajuste del margen inferior */
+}
+
+#inputLine {
+  position: absolute;
+  left: calc(-15px + 6ch);
+  width: calc(100% - 10px - 6ch);
+  height: 26px;
+  border: none;
+  padding-left: 1px;
+  bottom: -13px;
+  padding-top: 3px;
+  background: transparent;
+  color: #cecece;
+  font-size: 21.9px;
+  font-family: "dosFont";
+  /* padding: 0px; */
+  margin: 0;
+  resize: none;
+  outline: none;
+}
+
+#cursor {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #888;
+  font-size: 25px;
+}
+
+.borderBottom,
+.borderTop {
+  font-size: 19px;
+  margin-bottom: 2.34%;
+}
+
+.borderTop {
+  margin-bottom: -12px;
+}
+
+.borderBottom {
+  margin-top: -32px;
+}
+
+.helpCom {
+  font-size: 15px;
+  font-style: italic;
+  color: #555555;
+  margin-top: -2.3%;
+  margin-left: 16%;
+}
+
+/* styles.css */
+.dos-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.dos-title-bar {
+  background-color: #000;
+  color: #fff;
+  padding: 5px;
+  border-bottom: 1px solid #fff;
+}
+
+.dos-title {
+  font-size: 16px;
+}
+
+.dos-content {
+  padding: 10px;
+}
+
+#txt-content {
+  white-space: pre-wrap;
+  font-size: 14px;
+}
+
+.modal-contentTXT {
+  display: flex;
+  /* Usar flexbox para una mejor distribución de los elementos hijos */
+  flex-direction: column;
+  /* Organizar los elementos hijos en una columna */
+  justify-content: space-between;
+  /* Distribuir el espacio entre los elementos hijos */
+  width: 800px;
+  /* Ancho de la ventana modal */
+  height: 600px;
+  /* Altura de la ventana modal */
+  position: absolute;
+  /* Posición absoluta para permitir que se mueva */
+  top: 50%;
+  /* Centrar la ventana modal verticalmente */
+  left: 50%;
+  /* Centrar la ventana modal horizontalmente */
+  transform: translate(-50%, -50%);
+  /* Centrar la ventana modal en relación a su propia altura y anchura */
+  border: 2px solid #000;
+  box-shadow: 5px 5px #000;
+  background-color: blue;
+  /* Color de fondo azul */
+  resize: both;
+  /* Permite al usuario redimensionar la ventana modal en ambas direcciones */
+  overflow: auto;
+  /* Asegura que el contenido no se desborde */
+}
+
+.modal-contentCarpet {
+  display: flex;
+  /* Usar flexbox para una mejor distribución de los elementos hijos */
+  flex-direction: column;
+  /* Organizar los elementos hijos en una columna */
+  justify-content: space-between;
+  /* Distribuir el espacio entre los elementos hijos */
+  width: 800px;
+  /* Ancho de la ventana modal */
+  height: 600px;
+  /* Altura de la ventana modal */
+  position: absolute;
+  /* Posición absoluta para permitir que se mueva */
+  top: 50%;
+  /* Centrar la ventana modal verticalmente */
+  left: 50%;
+  /* Centrar la ventana modal horizontalmente */
+  transform: translate(-50%, -50%);
+  /* Centrar la ventana modal en relación a su propia altura y anchura */
+  border: 2px solid #000;
+  box-shadow: 5px 5px #000;
+  background-color: rgb(255, 255, 255);
+  /* Color de fondo azul */
+  resize: both;
+  /* Permite al usuario redimensionar la ventana modal en ambas direcciones */
+  overflow: auto;
+  /* Asegura que el contenido no se desborde */
+}
+
+.close:hover, .close:focus {
+  color: #000000;
+  text-decoration: none;
+  box-shadow: inset -20px -19px 0px 284px #fff;
+  cursor: pointer;
+  margin-top: -2px;
+}
+
+.closeCarpet:hover, .closeCarpet:focus {
+  color: #000000;
+  text-decoration: none;
+  box-shadow: inset -20px -19px 0px 284px #fff;
+  cursor: pointer;
+  margin-top: -2px;
+}
+
+.modal-title-barTXT {
+  cursor: move;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none; /* Evita la selección del texto */
+  /* padding: 10px; */
+  padding-top: 38px;
+  background-color: #ffffff;
+  border-bottom: 2px solid black;
+}
+
+.modal-title-barCarpet {
+  cursor: move;
+  /* padding: 10px; */
+  padding-top: 38px;
+  background-color: #ffffff;
+  border-bottom: 2px solid black;
+}
+
+.modal-titleTXT {
+  color: white;
+  font-family: dosFont;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  margin-top: -10px;
+  padding-top: 2px;
+  padding-bottom: 7px;
+  padding-left: 8px;
+  padding-right: 4px;
+  font-size: 30px;
+  transform: translateX(-50%);
+  background-color: black;
+}
+
+.modal-bodyTXT {
+  width: 100%;
+  height: calc(100% - 30px);
+  border: none;
+  color: black;
+  font-family: heroSoft;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  /* padding: 3px; */
+  margin-top: 0px;
+  font-size: 0px;
+  box-sizing: border-box;
+}
+
+.modal-bodyTXT textarea {
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  resize: none;
+  font-family: dosFont;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 28px;
+}
+
+.modal-bodyCarpet {
+  position: absolute;
+  top: 1.4em;
+  left: 0.1em;
+  border: none;
+  color: black;
+  font-family: dosFont;
+  /* padding: 3px; */
+  margin-top: 0px;
+  font-size: 30px;
+  box-sizing: border-box;
+}
+
+textarea {
+  scrollbar-color: #F3544D #ee8984;
+}
+
+.folder-content:hover {
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  background-color: black;
+  margin-top: -2px;
+  margin-left: -3px;
+  padding-top: 2px;
+  padding-left: 3px;
+}
+
+.folder-content {
+  /* Estilos específicos para los elementos generados dentro del modal */
+  /* Por ejemplo: */
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+}
+
+.folder-content:hover {
+  /* Estilos específicos para los elementos generados dentro del modal */
+  /* Por ejemplo: */
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  background-color: black;
+}
+
+.closeCarpet {
+  /* float: right; */
+  font-size: 40px;
+  font-weight: bold;
+  position: absolute;
+  /* margin-right: 100%; */
+  padding-top: 0px;
+  margin-top: 0px;
+  top: -7px;
+  padding-right: 6px;
+  padding-left: 8px;
+  padding-bottom: -1px;
+  margin-bottom: -6px;
+  /* bottom: 92.2%; */
+  right: -1px;
+  box-shadow: inset -20px -19px 0px 284px #000;
+  font-family: monospace;
+  color: white;
+}
+
+.close {
+  /* float: right; */
+  font-size: 40px;
+  font-weight: bold;
+  position: absolute;
+  /* margin-right: 100%; */
+  padding-top: 0px;
+  margin-top: 0px;
+  top: -7px;
+  padding-right: 6px;
+  padding-left: 8px;
+  padding-bottom: -1px;
+  margin-bottom: -6px;
+  /* bottom: 92.2%; */
+  right: -1px;
+  box-shadow: inset -20px -19px 0px 284px #000;
+  font-family: monospace;
+  color: white;
+}
+
+.modal-titleCarpet {
+  color: white;
+  font-family: dosFont;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  margin-top: -10px;
+  padding-top: 2px;
+  padding-bottom: 7px;
+  padding-left: 8px;
+  padding-right: 4px;
+  font-size: 30px;
+  transform: translateX(-50%);
+  background-color: black;
+}
+
+#myModalCarpet {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none; /* Evita la selección del texto */
+}
+
+.modal-title-barCarpet {
+  cursor: move;
+  /* padding: 10px; */
+  padding-top: 38px;
+  background-color: #ffffff;
+  border-bottom: 2px solid black;
+}
+
+.backLoadingColor {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black; /* Agrega el color de fondo negro */
+  z-index: -1; /* Asegura que esté detrás de todo */
+}
+
+@keyframes fadeOutBackground {
+  0% {
+    opacity: 1; /* Comienza con opacidad mínima */
+  }
+  99.9% {
+    opacity: 1; /* Termina con opacidad máxima */
+  }
+  100% {
+    opacity: 1; /* Termina con opacidad máxima */
+    display: none; /* Oculta completamente el elemento */
+  }
+}
+.heroSoftIntro {
+  font-family: "heroSoft";
+  font-size: 160px;
+  color: gray;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  z-index: 1; /* Asegura que esté encima del fondo negro */
+  animation: rotateHue 3s linear forwards, hideBackground 3s linear forwards; /* Aplica la animación de rotación de color y ocultamiento */
+}
+
+.secTxt {
+  font-family: "heroSoft";
+  font-size: 40px;
+  color: gray;
+  position: fixed;
+  top: calc(50% + 100px); /* Ajusta la posición vertical */
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  animation: hideBackground 3s linear forwards;
+}
+
+@keyframes rotateHue {
+  0% {
+    filter: hue-rotate(0deg); /* Empieza desde 0 grados */
+  }
+  100% {
+    filter: hue-rotate(360deg); /* Termina en 360 grados */
+  }
+}
+@keyframes hideElements {
+  0% {
+    opacity: 1; /* Inicia con opacidad completa */
+  }
+  99.9% {
+    opacity: 1; /* Mantiene la opacidad mientras se rota */
+  }
+  100% {
+    opacity: 1; /* Oculta el elemento al final de la animación */
+    display: none; /* Oculta completamente el elemento */
+  }
+}
+@keyframes hideBackground {
+  0% {
+    opacity: 1; /* Comienza con opacidad máxima */
+  }
+  100% {
+    opacity: 1; /* Termina con opacidad mínima */
+    display: none; /* Oculta completamente el elemento */
+  }
+}
+@font-face {
+  font-family: dosFont;
+  src: url(../fonts/PerfectDOS-VGA-437-Win.ttf);
+}
+@font-face {
+  font-family: heroSoft;
+  src: url(../fonts/Px437_ACM_VGA_8x8.ttf);
+}/*# sourceMappingURL=styles.css.map */
